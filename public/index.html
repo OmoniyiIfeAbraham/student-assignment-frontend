@@ -4,40 +4,59 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#1a73e8" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Assignments Hub — A simple and organized platform where Students can easily access and submit their assignments."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Apple & Manifest -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- SEO & Social Sharing -->
+    <meta property="og:title" content="Assignments Hub" />
+    <meta
+      property="og:description"
+      content="Access and manage assignments for Students in one place."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://assignments-hub.vercel.app/" />
+    <meta property="og:image" content="%PUBLIC_URL%/preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Assignments Hub" />
+    <meta
+      name="twitter:description"
+      content="A simple portal for coding assignments and progress tracking."
+    />
+
+    <title>Assignments Hub | Coding Assignments Portal</title>
+
+    <!-- Google Fonts (Optional) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background-color: #f7f9fc;
+        color: #222;
+      }
+
+      noscript {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #d32f2f;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
