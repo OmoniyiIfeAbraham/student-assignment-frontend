@@ -1,70 +1,200 @@
-# Getting Started with Create React App
+# Student Assignment System - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive React application for managing and viewing student coding assignments. Features separate views for administrators and students.
 
-## Available Scripts
+## 🎯 Purpose
 
-In the project directory, you can run:
+This frontend provides an intuitive interface for coding instructors to create and manage assignments, while giving students (Harold and Hera) a clean, distraction-free view of their assignments. Built as an educational project for teaching full-stack development to beginners.
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **🏠 Home Screen** - Easy navigation between Admin and Student views
+- **👨‍💼 Admin Dashboard** - Create, edit, and delete assignments with a rich text editor
+- **👨‍🎓 Student Views** - Personalized assignment pages for each student
+- **🎨 Modern UI** - Clean, responsive design with Tailwind CSS
+- **🔐 Secure Admin Access** - Login required for administrative functions
+- **📅 Due Date Tracking** - Visual indicators for assignment deadlines
+- **🎯 Student-Specific Content** - Color-coded sections for each student
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **React 18** - UI library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - Beautiful icons
+- **Fetch API** - HTTP requests to backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📋 Prerequisites
 
-### `npm run build`
+- Node.js (v14 or higher)
+- npm or yarn
+- Backend server running on `http://localhost:5000`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone <repository-url>
+cd assignment-frontend
+```
 
-### `npm run eject`
+2. Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Make sure Tailwind CSS is configured (should be set up automatically):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install -D tailwindcss
+npx tailwindcss init
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Start the development server:
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app will open at `http://localhost:3000`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎮 Usage
 
-### Code Splitting
+### For Instructors (Admin):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Click **"Admin Login"** from the home screen
+2. Enter credentials (default: `*****` / `********`)
+3. Click **"Create New Assignment"**
+4. Fill in the form:
+   - Select student (Harold or Hera)
+   - Enter assignment title
+   - Write assignment content (supports multi-line text)
+   - Optionally set a due date
+5. Click **"Create Assignment"**
+6. View, edit, or delete existing assignments from the dashboard
 
-### Analyzing the Bundle Size
+### For Students:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Click either **"Harold's Assignments"** or **"Hera's Assignments"**
+2. View all assigned work
+3. See assignment details, creation dates, and due dates
+4. No login required - instant access to assignments
 
-### Making a Progressive Web App
+## 🎨 Color Scheme
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Admin**: Indigo theme (`bg-indigo-600`)
+- **Harold**: Green theme (`bg-green-600`)
+- **Hera**: Purple theme (`bg-purple-600`)
 
-### Advanced Configuration
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+src/
+├── App.js          # Main component with all views
+├── index.js        # Entry point
+├── index.css       # Tailwind imports
+└── ...
+```
 
-### Deployment
+## 🔧 Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### API Endpoint
 
-### `npm run build` fails to minify
+The frontend connects to the backend at `http://localhost:5000/api`. To change this, update the `API_URL` constant in `App.js`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```javascript
+const API_URL = "http://your-backend-url/api";
+```
+
+## 📱 Responsive Design
+
+The application is fully responsive and works seamlessly on:
+
+- Desktop computers
+- Tablets
+- Mobile phones
+
+## 🎓 Learning Concepts
+
+This project teaches:
+
+- **React Hooks**: `useState`, `useEffect`
+- **Component State Management**
+- **API Integration**: Fetch requests and error handling
+- **Conditional Rendering**: Different views based on user type
+- **Form Handling**: Controlled components
+- **Styling**: Tailwind CSS utility classes
+- **UX Design**: Intuitive navigation and feedback
+
+## 📝 Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (⚠️ irreversible)
+
+## 🚀 Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `build/` folder.
+
+### Deploy Options
+
+- **Vercel**: `vercel --prod`
+- **Netlify**: Drag and drop the `build` folder
+- **GitHub Pages**: Use `gh-pages` package
+- **Render**: Connect your GitHub repository
+
+Don't forget to update the `API_URL` to your production backend URL!
+
+## 🔐 Security Notes
+
+- Admin credentials are sent to backend for verification
+- No sensitive data is stored in frontend
+- CORS is handled by the backend
+- For production, use HTTPS and environment variables
+
+## 🤝 Contributing
+
+This is an educational project. Contributions, suggestions, and forks are welcome!
+
+## 🐛 Known Issues
+
+- No file upload capability (future enhancement)
+- Single admin account only
+
+## 🔮 Future Enhancements
+
+- [ ] Assignment submission feature
+- [ ] File upload support
+- [ ] Progress tracking
+- [ ] Email notifications
+- [ ] Search and filter
+- [ ] Multiple admin accounts
+- [ ] Student profiles
+
+## 📄 License
+
+MIT
+
+## 👨‍💻 Author
+
+Created for teaching full-stack development to beginner coding students.
+
+## 🔗 Related
+
+- [Backend Repository](link-to-backend-repo)
+
+## 📞 Support
+
+For issues or questions, please open an issue in the GitHub repository.
+
+---
+
+**Happy Coding!** 🎉
